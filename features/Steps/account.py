@@ -17,7 +17,7 @@ def open_registration_page(context):
 
 @when('the user enters valid details and clicks on Create an Account button')
 def registration_details(context):
-    context.email = "test19043@gmail.com"
+    context.email = "test190@gmail.com"
     context.signup_page.register("V", "SRT", context.email, "Password@1234")
     time.sleep(3)
 
@@ -28,7 +28,7 @@ def verify_registration(context):
 
 @when('the user enters an email that is already registered')
 def registration_details(context):
-    context.email = "test19043@gmail.com"
+    context.email = "test190@gmail.com"
     context.signup_page.register("V", "SRT", context.email, "Password@1234")
 
 @then('the user should see an error message indicating the email already exists')
@@ -109,7 +109,7 @@ def open_login_page(context):
 
 @when('the user enters correct credentials and clicks the "Log In" button')
 def login_details(context):
-    context.email = "test19043@gmail.com"
+    context.email = "test190@gmail.com"
     if context.email is None:
         raise ValueError("Email is not available! Ensure the registration step ran before login.")
     context.login_page.login(context.email, "Password@1234")
@@ -122,7 +122,7 @@ def verify_login(context):
 
 @when('the user enters incorrect credentials and clicks the "Log In" button')
 def login_details(context):
-    context.email = "test19043@gmail.com"
+    context.email = "test190@gmail.com"
     context.login_page.login(context.email, "Passw")
     time.sleep(3)
 
